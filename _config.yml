@@ -1,0 +1,46 @@
+
+# 站点元信息（SEO）
+seo:
+  type: Person
+  name: yuehu-xm
+
+# RSS 输出
+feed:
+  path: feed.xml
+title: yuehu-xm
+description: 高校教师 · 研究方向（示例占位）：人工智能 / 机器学习 / 数据挖掘
+url: https://yuehu-xm.github.io
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# 使用 GitHub Pages 默认内置的主题（简洁稳妥）
+theme: minima
+
+# 生成的永久链接风格更友好
+permalink: pretty
+
+# 顶部导航展示的页面（文件需存在于仓库根目录）
+header_pages:
+  - about.md
+  - publications.md
+  - projects.md
+
+# GitHub Pages 白名单内的插件（可安全使用）
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# 作者与社交信息（按需替换）
+author:
+  name: yuehu-xm
+  email: yuehu@jmu.edu.cn
+  affiliation: Chengyi College, Jimei University
+
+# 默认 Markdown 渲染配置
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
