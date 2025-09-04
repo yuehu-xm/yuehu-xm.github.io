@@ -6,6 +6,9 @@
 
 .PHONY: all s b g build clean a m p amp
 
+# 关闭子 make 的目录提示（更安静）
+#MAKEFLAGS += --no-print-directory
+
 # 工作根目录（make 的内置变量 CURDIR 即当前目录）
 WORKROOT := $(CURDIR)
 # 多语言构建时的统一输出目录
@@ -42,19 +45,23 @@ g:
 # ======================================================================================================================
 
 a:
-	git add .
+	@git add .
 
 m:
 	@git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)"
 
 p:
-	git push
+	@git push
 
 
 amp:
-	$(MAKE) a
-	$(MAKE) m
-	$(MAKE) p
+#	$(MAKE) a
+#	$(MAKE) m
+#	$(MAKE) p
+
+	@git add .
+	@git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)"
+	@git push
 
 
 
