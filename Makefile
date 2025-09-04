@@ -45,9 +45,7 @@ a:
 	git add .
 
 m:
-	# 若无暂存改动则跳过提交，避免报错
-	#git diff --cached --quiet && echo "[m] no staged changes, skip commit" || git commit -m "$(COMMIT_MSG)"
-	git commit -m "$(COMMIT_MSG)"
+	@git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)"
 
 p:
 	git push
