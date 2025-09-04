@@ -59,9 +59,9 @@ amp:
 #	$(MAKE) m
 #	$(MAKE) p
 
-	@git add .
-	@git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)"
-	@git push
+	git add .
+	git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)"
+	git push
 
 
 
