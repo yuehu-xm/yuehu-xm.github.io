@@ -63,6 +63,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#d" class="nav-link">d</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -84,7 +88,19 @@
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
-</code></pre></div>
+</code></pre>
+<h2 id="d">d</h2>
+<p>conda info -e
+conda create -n website_mkdocs_material9 python=3.11 -y
+conda activate website_mkdocs_material9</p>
+<p>pip install mkdocs-material -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -U mkdocs-material -i https://pypi.tuna.tsinghua.edu.cn/simple</p>
+<p>mkdocs new . # Create a new project.
+mkdocs serve # Start the live-reloading docs server.
+mkdocs build # Build the documentation site.
+mkdocs -h # Print help message and exit.
+mkdocs gh-deploy # Deploy to GitHub Pages
+conda deactivate</p></div>
             </div>
         </div>
 
@@ -166,5 +182,5 @@ docs/
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2025-09-03 17:46:04.802430+00:00
+Build Date UTC : 2025-09-04 02:23:49.964313+00:00
 -->
