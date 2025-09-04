@@ -4,7 +4,7 @@
 # - 若在 CMD/PowerShell 下运行，请使用下方给出的 Windows 原生命令（取消注释）
 # 前提依赖：已安装 Python 与 mkdocs（例如：pip install mkdocs mkdocs-material）
 
-.PHONY: all s b g build clean a m p amp
+.PHONY: all s b g build clean a m p amp ampw
 
 # 关闭子 make 的目录提示（更安静）
 #MAKEFLAGS += --no-print-directory
@@ -56,8 +56,7 @@ p:
 
 amp:
 	git add .
-	git diff --cached --quiet && echo [amp] no staged changes, skip commit and push || (git commit -m "$(COMMIT_MSG)" && git push)
-
+	@git diff --cached --quiet && echo [m] no staged changes, skip commit || git commit -m "$(COMMIT_MSG)" && git push
 
 
 # ======================================================================================================================
