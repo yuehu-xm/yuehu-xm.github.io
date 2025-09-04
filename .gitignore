@@ -1,2 +1,7 @@
 
 .idea/
+docs/
+site/
+
+mkdocs.yml
+mkdocs_HuYue_9.6.18.yml

@@ -7,24 +7,17 @@ MKDOCS_LATEST := mkdocs_HuYue_9.6.18.yml
 MKDOCS_EN   := mkdocs_en.yml
 MKDOCS_ZH   := mkdocs_zh.yml
 
-# 默认目标：构建站点
-all: build
+# 默认目标
+all: s
 
-# 使用指定的 mkdocs 配置文件启动本地开发服务器（支持热重载）
 s:
 	mkdocs serve -f $(MKDOCS_LATEST)
 
-# 通过 Bundler 启动 Jekyll，本地服务器启用 livereload（需安装依赖）
-sj:
-	bundle exec jekyll serve --livereload
-
-# 构建使用指定 mkdocs 配置文件的静态站点
 b:
 	mkdocs build -f $(MKDOCS_LATEST)
 
-# 安装项目所需的 Python 依赖（参见 `requirements.txt`）
-install:
-	pip install -r requirements.txt
+g:
+	mkdocs gh-deploy -f $(MKDOCS_LATEST) --clean
 
 build:
 	mkdir -p $(OUTDIR)/en
